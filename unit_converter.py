@@ -4,12 +4,14 @@ answer = "yes"
 KILOMETER_TO_MILE = 0.6213712
 
 while answer.lower() == "yes":
-    kilometers = input("Please enter the number of kilometers you want to convert into miles: ")
+    kilometers = input(
+        "Please enter the number of kilometers you want to convert into miles: "
+    )
 
     if "," in kilometers:
         kilometers = float(kilometers.replace(",", "."))
     else:
-        kilometers = (float(kilometers))
+        kilometers = float(kilometers)
 
     miles = round(kilometers * KILOMETER_TO_MILE, 3)
 
